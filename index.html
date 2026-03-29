@@ -6,13 +6,14 @@
 <title>Botify Latam</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#0A0F2C,#0F1A3A);
+background:linear-gradient(180deg,#1C2A5A,#2E3F8F);
 color:white;
 }
 
@@ -24,19 +25,13 @@ align-items:center;
 padding:20px 40px;
 position:fixed;
 width:100%;
-background:rgba(10,15,44,0.7);
+background:rgba(28,42,90,0.8);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 nav img{
-height:40px;
-}
-
-.menu a{
-margin-left:20px;
-color:#ccc;
-text-decoration:none;
+height:45px;
 }
 
 /* HERO */
@@ -44,123 +39,103 @@ text-decoration:none;
 min-height:100vh;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-padding:120px 20px;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:400px;
-height:400px;
-background:radial-gradient(circle,#7B2FF7,transparent);
-filter:blur(120px);
-top:-100px;
-left:-100px;
-opacity:0.4;
+justify-content:space-around;
+padding:120px 40px;
+flex-wrap:wrap;
 }
 
 .hero h1{
 font-size:48px;
-max-width:900px;
-margin:auto;
-background:linear-gradient(90deg,#fff,#7B2FF7);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+max-width:600px;
 }
 
 .hero p{
-color:#bbb;
+color:#ddd;
 margin:20px 0;
-font-size:18px;
 }
 
 .btn{
 background:linear-gradient(90deg,#7B2FF7,#00C6FF);
-padding:16px 32px;
+padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
 color:white;
 font-weight:600;
 display:inline-block;
 margin-top:10px;
-transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.05);
+.hero img{
+width:350px;
 }
 
-/* SECTIONS */
+/* SECCIONES */
 section{
-padding:90px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 h2{
-font-size:32px;
 margin-bottom:20px;
 }
 
-/* GRID */
+/* CARDS */
 .grid{
 display:flex;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
 justify-content:center;
 }
 
 .card{
-background:#11193A;
-padding:25px;
-border-radius:12px;
-max-width:280px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 15px rgba(123,47,247,0.3);
-}
-
-/* CANALES */
-.channels{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-justify-content:center;
-margin-top:30px;
-}
-
-.channel{
 background:rgba(255,255,255,0.08);
-padding:12px 20px;
-border-radius:30px;
+padding:25px;
+border-radius:15px;
+width:280px;
+}
+
+/* PRECIOS */
+.pricing{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.plan{
+background:#11193A;
+padding:30px;
+border-radius:15px;
+width:280px;
+}
+
+.price{
+font-size:28px;
+margin:10px 0;
+color:#00C6FF;
+}
+
+/* TESTIMONIO */
+.testimonial{
+max-width:500px;
+margin:auto;
+background:#11193A;
+padding:20px;
+border-radius:15px;
+}
+
+/* REDES */
+.socials a{
+font-size:24px;
+margin:10px;
+color:white;
 }
 
 /* CTA */
 .cta{
 background:linear-gradient(90deg,#7B2FF7,#00C6FF);
-padding:60px 20px;
+padding:50px;
 border-radius:20px;
-}
-
-/* REDES */
-.socials a{
-margin:10px;
-padding:12px 18px;
-background:#1F2937;
-border-radius:10px;
-text-decoration:none;
-color:white;
-display:inline-block;
-transition:0.3s;
-}
-
-.socials a:hover{
-background:#7B2FF7;
 }
 
 /* WHATSAPP */
@@ -171,14 +146,8 @@ right:20px;
 background:#25D366;
 padding:15px;
 border-radius:50%;
-text-decoration:none;
 color:white;
-}
-
-/* FOOTER */
-footer{
-padding:30px;
-color:#aaa;
+font-size:20px;
 }
 </style>
 </head>
@@ -186,88 +155,104 @@ color:#aaa;
 <body>
 
 <nav>
-<img src="img/logo.png" alt="Botify Latam">
-<div class="menu">
-<a href="#servicios">Servicios</a>
-<a href="#demo">Demo</a>
-</div>
+<img src="img/logo.png">
 </nav>
 
 <section class="hero">
 <div>
-<h1>Automatiza TODOS tus canales y deja de perder clientes</h1>
-
-<p>
-WhatsApp, Instagram, Facebook y tu página web trabajando por ti 24/7 desde un solo sistema.
-</p>
+<h1>Convierte mensajes en ventas automáticas</h1>
+<p>Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema</p>
 
 <a href="https://wa.link/00056a" target="_blank" class="btn">
-Automatizar mi negocio
+Quiero más clientes
 </a>
+</div>
 
-<div class="channels">
-<div class="channel">WhatsApp</div>
-<div class="channel">Instagram</div>
-<div class="channel">Facebook</div>
-<div class="channel">Página Web</div>
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+</section>
+
+<section>
+<h2>¿Qué problema resolvemos?</h2>
+
+<div class="grid">
+<div class="card">Clientes sin respuesta</div>
+<div class="card">Ventas perdidas</div>
+<div class="card">Falta de tiempo</div>
+</div>
+</section>
+
+<section>
+<h2>¿Qué obtienes?</h2>
+
+<div class="grid">
+<div class="card">Automatización 24/7</div>
+<div class="card">Más ventas</div>
+<div class="card">Menos trabajo manual</div>
+</div>
+</section>
+
+<section>
+<h2>Planes</h2>
+
+<div class="pricing">
+
+<div class="plan">
+<h3>Starter</h3>
+<div class="price">$49</div>
+<p>Automatización básica</p>
+</div>
+
+<div class="plan">
+<h3>Pro</h3>
+<div class="price">$99</div>
+<p>Sistema completo multicanal</p>
+</div>
+
+<div class="plan">
+<h3>Premium</h3>
+<div class="price">$199</div>
+<p>Todo + soporte personalizado</p>
 </div>
 
 </div>
 </section>
 
 <section>
-<h2>El problema real</h2>
+<h2>Resultados reales</h2>
 
-<div class="grid">
-<div class="card">Clientes escriben por diferentes canales</div>
-<div class="card">No puedes responder todo a tiempo</div>
-<div class="card">Pierdes ventas todos los días</div>
+<div class="testimonial">
+<p>"Ahora vendemos incluso cuando estamos dormidos."</p>
 </div>
-
 </section>
 
-<section id="servicios">
-<h2>La solución completa</h2>
-
-<div class="grid">
-<div class="card">Automatización en WhatsApp</div>
-<div class="card">Respuestas en Instagram y Facebook</div>
-<div class="card">Chatbot en tu página web</div>
-</div>
-
-<br>
-
-<a href="https://wa.link/00056a" target="_blank" class="btn">
-Quiero la solución completa
-</a>
-
-</section>
-
-<section id="demo" class="cta">
+<section class="cta">
 <h2>Empieza hoy 🚀</h2>
-<p>Activa tu sistema automatizado en todos tus canales</p>
+<p>Te lo dejamos funcionando rápido</p>
 
 <a href="https://wa.link/00056a" target="_blank" class="btn">
-Quiero empezar
+Empezar ahora
 </a>
-
 </section>
 
 <section>
 <h2>Síguenos</h2>
 
 <div class="socials">
-<a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/botifycr" target="_blank">Instagram</a>
-<a href="https://www.tiktok.com/@botify.latam.cost" target="_blank">TikTok</a>
+<a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.instagram.com/botifycr" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.tiktok.com/@botify.latam.cost" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
 </div>
 </section>
 
-<footer>
-<p>Botify Latam | Costa Rica</p>
-</footer>
-
-<a href="https://wa.link/00056a" target="_blank" class="whatsapp">💬</a>
+<a href="https://wa.link/00056a" target="_blank" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
