@@ -13,7 +13,7 @@
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#1C2A5A,#2E3F8F);
+background:linear-gradient(180deg,#2E3F8F,#4A5FD1);
 color:white;
 }
 
@@ -25,13 +25,14 @@ align-items:center;
 padding:20px 40px;
 position:fixed;
 width:100%;
-background:rgba(28,42,90,0.8);
+background:rgba(46,63,143,0.8);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 nav img{
-height:45px;
+height:60px;
+background:transparent;
 }
 
 /* HERO */
@@ -39,47 +40,46 @@ height:45px;
 min-height:100vh;
 display:flex;
 align-items:center;
-justify-content:space-around;
-padding:120px 40px;
+justify-content:space-between;
+padding:120px 60px;
 flex-wrap:wrap;
 }
 
+.hero-text{
+max-width:550px;
+}
+
 .hero h1{
-font-size:48px;
-max-width:600px;
+font-size:52px;
+line-height:1.2;
 }
 
 .hero p{
-color:#ddd;
+color:#eee;
 margin:20px 0;
+font-size:18px;
 }
 
 .btn{
-background:linear-gradient(90deg,#7B2FF7,#00C6FF);
+background:white;
+color:#2E3F8F;
 padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
-color:white;
 font-weight:600;
 display:inline-block;
-margin-top:10px;
 }
 
 .hero img{
-width:350px;
+width:380px;
 }
 
-/* SECCIONES */
+/* CARDS */
 section{
 padding:80px 20px;
 text-align:center;
 }
 
-h2{
-margin-bottom:20px;
-}
-
-/* CARDS */
 .grid{
 display:flex;
 gap:20px;
@@ -88,65 +88,48 @@ justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
+background:white;
+color:#2E3F8F;
 padding:25px;
 border-radius:15px;
 width:280px;
-}
-
-/* PRECIOS */
-.pricing{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.plan{
-background:#11193A;
-padding:30px;
-border-radius:15px;
-width:280px;
-}
-
-.price{
-font-size:28px;
-margin:10px 0;
-color:#00C6FF;
-}
-
-/* TESTIMONIO */
-.testimonial{
-max-width:500px;
-margin:auto;
-background:#11193A;
-padding:20px;
-border-radius:15px;
-}
-
-/* REDES */
-.socials a{
-font-size:24px;
-margin:10px;
-color:white;
+font-weight:500;
 }
 
 /* CTA */
 .cta{
-background:linear-gradient(90deg,#7B2FF7,#00C6FF);
-padding:50px;
+background:white;
+color:#2E3F8F;
+padding:60px;
 border-radius:20px;
+margin:40px;
 }
 
-/* WHATSAPP */
+/* REDES */
+.socials a{
+font-size:26px;
+margin:15px;
+color:white;
+}
+
+/* WHATSAPP NUEVO */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:15px;
-border-radius:50%;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
 color:white;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp i{
 font-size:20px;
 }
 </style>
@@ -159,9 +142,13 @@ font-size:20px;
 </nav>
 
 <section class="hero">
-<div>
+
+<div class="hero-text">
 <h1>Convierte mensajes en ventas automáticas</h1>
-<p>Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema</p>
+
+<p>
+Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema
+</p>
 
 <a href="https://wa.link/00056a" target="_blank" class="btn">
 Quiero más clientes
@@ -169,6 +156,7 @@ Quiero más clientes
 </div>
 
 <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
 </section>
 
 <section>
@@ -188,40 +176,6 @@ Quiero más clientes
 <div class="card">Automatización 24/7</div>
 <div class="card">Más ventas</div>
 <div class="card">Menos trabajo manual</div>
-</div>
-</section>
-
-<section>
-<h2>Planes</h2>
-
-<div class="pricing">
-
-<div class="plan">
-<h3>Starter</h3>
-<div class="price">$49</div>
-<p>Automatización básica</p>
-</div>
-
-<div class="plan">
-<h3>Pro</h3>
-<div class="price">$99</div>
-<p>Sistema completo multicanal</p>
-</div>
-
-<div class="plan">
-<h3>Premium</h3>
-<div class="price">$199</div>
-<p>Todo + soporte personalizado</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>Resultados reales</h2>
-
-<div class="testimonial">
-<p>"Ahora vendemos incluso cuando estamos dormidos."</p>
 </div>
 </section>
 
@@ -251,7 +205,7 @@ Empezar ahora
 </section>
 
 <a href="https://wa.link/00056a" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
+<i class="fab fa-whatsapp"></i> Escribinos
 </a>
 
 </body>
