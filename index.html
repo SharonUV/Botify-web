@@ -21,22 +21,23 @@ body{
   color:white;
 }
 
-/* NAV */
+/* NAV ARREGLADO */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 40px;
+  padding:10px 40px; /* 🔥 más compacto */
   position:fixed;
   width:100%;
-  background:rgba(30,27,75,0.8);
-  backdrop-filter:blur(10px);
+  background:#1E1B4B; /* 🔥 sólido, sin blur */
   z-index:1000;
 }
 
+/* LOGO PROPORCIONAL */
 nav img{
-  height:150px; /* logo más grande sin romper estructura */
-  background:transparent;
+  height:80px; /* 🔥 grande pero sin romper */
+  width:auto;
+  display:block;
 }
 
 /* HERO */
@@ -45,7 +46,7 @@ nav img{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:120px 60px;
+  padding:140px 60px 80px; /* 🔥 espacio para el nav */
   flex-wrap:wrap;
 }
 
@@ -72,15 +73,10 @@ nav img{
   text-decoration:none;
   font-weight:600;
   display:inline-block;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
 }
 
 .hero img{
-  width:260px; /* robot más pequeño */
+  width:260px;
 }
 
 /* SECCIONES */
@@ -102,7 +98,6 @@ section{
   padding:25px;
   border-radius:15px;
   width:280px;
-  font-weight:500;
 }
 
 /* CTA */
@@ -136,10 +131,6 @@ section{
   align-items:center;
   gap:10px;
   box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.whatsapp i{
-  font-size:20px;
 }
 </style>
 </head>
