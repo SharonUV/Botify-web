@@ -9,40 +9,50 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+--primary:#6C2BD9;
+--secondary:#2563EB;
+--gradient:linear-gradient(135deg,#6C2BD9,#2563EB);
+--dark:#0F172A;
+--text:#FFFFFF;
+--soft:#CBD5F5;
+}
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#2E3F8F,#4A5FD1);
-color:white;
+background:var(--dark);
+color:var(--text);
 }
 
-/* NAV */
+/ NAV /
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:20px 50px;
 position:fixed;
 width:100%;
-background:rgba(46,63,143,0.8);
-backdrop-filter:blur(10px);
+background:rgba(15,23,42,0.7);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
 nav img{
-height:60px;
-background:transparent;
+height:180px;
 }
 
-/* HERO */
+/ HERO /
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:120px 60px;
+padding:140px 60px 80px;
 flex-wrap:wrap;
+background:var(--gradient);
+border-radius:0 0 40px 40px;
 }
 
 .hero-text{
@@ -50,75 +60,93 @@ max-width:550px;
 }
 
 .hero h1{
-font-size:52px;
-line-height:1.2;
+font-size:56px;
+line-height:1.1;
 }
 
 .hero p{
-color:#eee;
-margin:20px 0;
+color:var(--soft);
+margin:25px 0;
 font-size:18px;
 }
 
 .btn{
 background:white;
-color:#2E3F8F;
+color:#6C2BD9;
 padding:15px 30px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
 display:inline-block;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .hero img{
-width:380px;
+width:240px;
 }
 
-/* CARDS */
+/ SECCIONES /
 section{
 padding:80px 20px;
 text-align:center;
 }
 
+/ GRID /
 .grid{
 display:flex;
-gap:20px;
+gap:25px;
 flex-wrap:wrap;
 justify-content:center;
 }
 
+/ CARDS /
 .card{
-background:white;
-color:#2E3F8F;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
 padding:25px;
-border-radius:15px;
+border-radius:18px;
 width:280px;
 font-weight:500;
+transition:0.3s;
 }
 
-/* CTA */
+.card:hover{
+transform:translateY(-5px);
+}
+
+/ CTA /
 .cta{
-background:white;
-color:#2E3F8F;
-padding:60px;
-border-radius:20px;
+background:var(--gradient);
+color:white;
+padding:70px;
+border-radius:25px;
 margin:40px;
 }
 
-/* REDES */
+/ REDES /
 .socials a{
 font-size:26px;
 margin:15px;
 color:white;
+transition:0.3s;
 }
 
-/* WHATSAPP NUEVO */
+.socials a:hover{
+transform:scale(1.2);
+}
+
+/ WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:12px 20px;
+padding:14px 22px;
 border-radius:30px;
 text-decoration:none;
 color:white;
@@ -138,7 +166,7 @@ font-size:20px;
 <body>
 
 <nav>
-<img src="img/logo.png">
+<img src="img/logo.png" alt="Botify Latam Logo">
 </nav>
 
 <section class="hero">
@@ -155,8 +183,7 @@ Quiero más clientes
 </a>
 </div>
 
-<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
-
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot">
 </section>
 
 <section>
@@ -205,7 +232,7 @@ Empezar ahora
 </section>
 
 <a href="https://wa.link/00056a" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i> Escribinos
+<i class="fab fa-whatsapp"></i> Escribenos
 </a>
 
 </body>
