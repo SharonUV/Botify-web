@@ -1,4 +1,4 @@
-[1:21 a. m., 29/3/2026] Sharon 👸🏽: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -13,99 +13,67 @@
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#1E1B4B,#4F46E5);
+background:linear-gradient(180deg,#0F172A,#4F46E5);
 color:white;
 }
 
-/* 🔥 NAV SIN FRANJA */
-nav{
+/* LOGO */
+.logo{
 position:absolute;
 top:20px;
 left:40px;
-z-index:1000;
 }
 
-/* LOGO MÁS GRANDE Y LIMPIO */
-nav img{
-height:120px;
+.logo img{
+height:100px;
 }
 
 /* HERO */
 .hero{
 min-height:100vh;
 display:flex;
+flex-direction:column;
+justify-content:center;
 align-items:center;
-justify-co…
-[1:21 a. m., 29/3/2026] Sharon 👸🏽: <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Botify Latam</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#1E1B4B,#4F46E5);
-color:white;
-}
-
-/* 🔥 NAV SIN FRANJA */
-nav{
-position:absolute;
-top:20px;
-left:40px;
-z-index:1000;
-}
-
-/* LOGO MÁS GRANDE Y LIMPIO */
-nav img{
-height:120px;
-}
-
-/* HERO */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:120px 60px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-max-width:600px;
+text-align:center;
+padding:100px 20px;
 }
 
 .hero h1{
 font-size:60px;
+max-width:800px;
 line-height:1.1;
 }
 
 .hero p{
-color:#E0E7FF;
 margin:20px 0;
-font-size:18px;
+color:#CBD5F5;
+font-size:20px;
+max-width:600px;
 }
 
+/* BOTONES */
 .btn{
 background:linear-gradient(135deg,#6C2BD9,#2563EB);
 color:white;
-padding:15px 35px;
+padding:16px 35px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
 display:inline-block;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+margin-top:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* ROBOT */
 .hero img{
-width:260px;
+width:220px;
+margin-top:40px;
 }
 
 /* SECCIONES */
@@ -114,11 +82,17 @@ padding:80px 20px;
 text-align:center;
 }
 
+h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+/* GRID */
 .grid{
 display:flex;
-gap:25px;
 flex-wrap:wrap;
 justify-content:center;
+gap:25px;
 }
 
 /* CARDS PRO */
@@ -127,17 +101,45 @@ background:rgba(255,255,255,0.08);
 border:1px solid rgba(255,255,255,0.15);
 backdrop-filter:blur(10px);
 padding:30px;
-border-radius:18px;
+border-radius:20px;
 width:280px;
+transition:0.3s;
 }
 
-/* CTA */
+.card i{
+font-size:30px;
+margin-bottom:15px;
+color:#A78BFA;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* COMO FUNCIONA */
+.steps{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.step{
+max-width:250px;
+}
+
+.step i{
+font-size:35px;
+margin-bottom:15px;
+color:#60A5FA;
+}
+
+/* CTA FINAL */
 .cta{
 background:linear-gradient(135deg,#6C2BD9,#2563EB);
-color:white;
-padding:70px;
-border-radius:25px;
-margin:40px;
+padding:80px 20px;
+border-radius:30px;
+margin:40px 20px;
 }
 
 /* REDES */
@@ -153,7 +155,7 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:12px 20px;
+padding:14px 22px;
 border-radius:30px;
 text-decoration:none;
 color:white;
@@ -168,13 +170,12 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 
 <body>
 
-<nav>
-<img src="img/logo.png" alt="Logo">
-</nav>
+<div class="logo">
+<img src="img/logo.png">
+</div>
 
 <section class="hero">
 
-<div class="hero-text">
 <h1>Convierte mensajes en ventas automáticas</h1>
 
 <p>
@@ -184,7 +185,6 @@ Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema
 <a href="https://wa.link/00056a" target="_blank" class="btn">
 Quiero más clientes
 </a>
-</div>
 
 <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
 
@@ -194,9 +194,19 @@ Quiero más clientes
 <h2>¿Qué problema resolvemos?</h2>
 
 <div class="grid">
-<div class="card">Clientes sin respuesta</div>
-<div class="card">Ventas perdidas</div>
-<div class="card">Falta de tiempo</div>
+<div class="card"><i class="fas fa-comments"></i><p>Clientes sin respuesta</p></div>
+<div class="card"><i class="fas fa-chart-line"></i><p>Ventas perdidas</p></div>
+<div class="card"><i class="fas fa-clock"></i><p>Falta de tiempo</p></div>
+</div>
+</section>
+
+<section>
+<h2>¿Cómo funciona?</h2>
+
+<div class="steps">
+<div class="step"><i class="fas fa-plug"></i><p>Conectamos tus canales</p></div>
+<div class="step"><i class="fas fa-robot"></i><p>Automatizamos respuestas</p></div>
+<div class="step"><i class="fas fa-money-bill-wave"></i><p>Generas más ventas</p></div>
 </div>
 </section>
 
@@ -204,9 +214,9 @@ Quiero más clientes
 <h2>¿Qué obtienes?</h2>
 
 <div class="grid">
-<div class="card">Automatización 24/7</div>
-<div class="card">Más ventas</div>
-<div class="card">Menos trabajo manual</div>
+<div class="card"><i class="fas fa-bolt"></i><p>Automatización 24/7</p></div>
+<div class="card"><i class="fas fa-coins"></i><p>Más ventas</p></div>
+<div class="card"><i class="fas fa-brain"></i><p>Menos trabajo manual</p></div>
 </div>
 </section>
 
@@ -223,15 +233,9 @@ Empezar ahora
 <h2>Síguenos</h2>
 
 <div class="socials">
-<a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank">
-<i class="fab fa-facebook"></i>
-</a>
-<a href="https://www.instagram.com/botifycr" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://www.tiktok.com/@botify.latam.cost" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
+<a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/botifycr" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@botify.latam.cost" target="_blank"><i class="fab fa-tiktok"></i></a>
 </div>
 </section>
 
