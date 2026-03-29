@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[12:56 a. m., 29/3/2026] Sharon 👸🏽: <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -31,49 +31,88 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 50px;
+padding:20px 50px;…
+[1:02 a. m., 29/3/2026] Sharon 👸🏽: <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botify Latam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+--primary:#6C2BD9;
+--secondary:#2563EB;
+--gradient:linear-gradient(135deg,#6C2BD9,#2563EB);
+--dark:#0F172A;
+--text:#FFFFFF;
+--soft:#CBD5F5;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--dark);
+color:var(--text);
+}
+
+/ NAV CENTRADO /
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px 20px;
 position:fixed;
 width:100%;
 background:rgba(15,23,42,0.7);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 z-index:1000;
 }
 
+/ LOGO GRANDE PERO CONTROLADO /
 nav img{
-height:180px;
+height:120px;
+max-width:90%;
+object-fit:contain;
 }
 
-/ HERO /
+/ HERO CENTRADO /
 .hero{
 min-height:100vh;
 display:flex;
+flex-direction:column;
 align-items:center;
-justify-content:space-between;
-padding:140px 60px 80px;
-flex-wrap:wrap;
+justify-content:center;
+text-align:center;
+padding:160px 20px 80px;
 background:var(--gradient);
 border-radius:0 0 40px 40px;
 }
 
 .hero-text{
-max-width:550px;
+max-width:600px;
 }
 
 .hero h1{
-font-size:56px;
-line-height:1.1;
+font-size:42px;
+line-height:1.2;
 }
 
 .hero p{
 color:var(--soft);
-margin:25px 0;
+margin:20px 0;
 font-size:18px;
 }
 
+/ BOTÓN /
 .btn{
 background:white;
 color:#6C2BD9;
-padding:15px 30px;
+padding:14px 28px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
@@ -85,59 +124,49 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+/ ROBOT BIEN POSICIONADO /
 .hero img{
-width:240px;
+width:200px;
+margin-top:30px;
 }
 
 / SECCIONES /
 section{
-padding:80px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
-/ GRID /
+/ GRID CENTRADO /
 .grid{
 display:flex;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 justify-content:center;
 }
 
-/ CARDS /
+/ CARDS PRO /
 .card{
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
 border:1px solid rgba(255,255,255,0.1);
 padding:25px;
-border-radius:18px;
-width:280px;
-font-weight:500;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+border-radius:15px;
+width:260px;
 }
 
 / CTA /
 .cta{
 background:var(--gradient);
 color:white;
-padding:70px;
-border-radius:25px;
-margin:40px;
+padding:60px 20px;
+border-radius:20px;
+margin:30px 15px;
 }
 
 / REDES /
 .socials a{
-font-size:26px;
-margin:15px;
+font-size:24px;
+margin:10px;
 color:white;
-transition:0.3s;
-}
-
-.socials a:hover{
-transform:scale(1.2);
 }
 
 / WHATSAPP */
@@ -146,19 +175,15 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:14px 22px;
+padding:12px 18px;
 border-radius:30px;
 text-decoration:none;
 color:white;
 font-weight:600;
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.whatsapp i{
-font-size:20px;
 }
 </style>
 </head>
@@ -184,6 +209,7 @@ Quiero más clientes
 </div>
 
 <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot">
+
 </section>
 
 <section>
@@ -232,7 +258,7 @@ Empezar ahora
 </section>
 
 <a href="https://wa.link/00056a" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i> Escribenos
+<i class="fab fa-whatsapp"></i> Escribinos
 </a>
 
 </body>
