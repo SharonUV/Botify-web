@@ -9,128 +9,153 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#1E1B4B,#4F46E5);
-  color:white;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#1E1B4B,#4F46E5);
+color:white;
 }
 
-/* NAV ARREGLADO */
+/* NAV MEJORADO */
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 40px; /* 🔥 más compacto */
-  position:fixed;
-  width:100%;
-  background:#1E1B4B; /* 🔥 sólido, sin blur */
-  z-index:1000;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+position:fixed;
+width:100%;
+background:linear-gradient(90deg,#1E1B4B,#4F46E5);
+z-index:1000;
 }
 
-/* LOGO PROPORCIONAL */
 nav img{
-  height:80px; /* 🔥 grande pero sin romper */
-  width:auto;
-  display:block;
+height:110px;
 }
 
 /* HERO */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:140px 60px 80px; /* 🔥 espacio para el nav */
-  flex-wrap:wrap;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:160px 60px 80px;
+flex-wrap:wrap;
 }
 
 .hero-text{
-  max-width:550px;
+max-width:600px;
 }
 
 .hero h1{
-  font-size:52px;
-  line-height:1.2;
+font-size:60px;
+line-height:1.1;
+text-align:center;
 }
 
 .hero p{
-  color:#E0E7FF;
-  margin:20px 0;
-  font-size:18px;
+color:#E0E7FF;
+margin:20px 0;
+font-size:18px;
+text-align:center;
 }
 
+/* BOTÓN PRO */
 .btn{
-  background:white;
-  color:#4F46E5;
-  padding:15px 30px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
+background:linear-gradient(135deg,#6C2BD9,#2563EB);
+color:white;
+padding:15px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
+.btn:hover{
+transform:translateY(-3px) scale(1.05);
+}
+
+/* CENTRAR BOTÓN */
+.hero-text a{
+display:block;
+text-align:center;
+margin-top:20px;
+}
+
+/* ROBOT */
 .hero img{
-  width:260px;
+width:260px;
 }
 
 /* SECCIONES */
 section{
-  padding:80px 20px;
-  text-align:center;
+padding:80px 20px;
+text-align:center;
 }
 
+/* GRID */
 .grid{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
+/* CARDS PROFESIONALES */
 .card{
-  background:white;
-  color:#1E1B4B;
-  padding:25px;
-  border-radius:15px;
-  width:280px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:18px;
+width:280px;
+font-weight:500;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.15);
 }
 
 /* CTA */
 .cta{
-  background:white;
-  color:#1E1B4B;
-  padding:60px;
-  border-radius:20px;
-  margin:40px;
+background:linear-gradient(135deg,#6C2BD9,#2563EB);
+color:white;
+padding:70px;
+border-radius:25px;
+margin:40px;
 }
 
 /* REDES */
 .socials a{
-  font-size:26px;
-  margin:15px;
-  color:white;
+font-size:26px;
+margin:15px;
+color:white;
+transition:0.3s;
+}
+
+.socials a:hover{
+transform:scale(1.2);
 }
 
 /* WHATSAPP */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:12px 20px;
-  border-radius:30px;
-  text-decoration:none;
-  color:white;
-  font-weight:600;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+display:flex;
+align-items:center;
+gap:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -138,66 +163,74 @@ section{
 <body>
 
 <nav>
-  <img src="img/logo.png" alt="Botify Latam Logo">
+<img src="img/logo.png" alt="Logo">
 </nav>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Convierte mensajes en ventas automáticas</h1>
-    <p>
-      Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema
-    </p>
-    <a href="https://wa.link/00056a" target="_blank" class="btn">
-      Quiero más clientes
-    </a>
-  </div>
 
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot">
+<div class="hero-text">
+<h1>Convierte mensajes en ventas automáticas</h1>
+
+<p>
+Automatiza WhatsApp, Instagram, Facebook y tu web desde un solo sistema
+</p>
+
+<a href="https://wa.link/00056a" target="_blank" class="btn">
+Quiero más clientes
+</a>
+</div>
+
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
 </section>
 
 <section>
-  <h2>¿Qué problema resolvemos?</h2>
-  <div class="grid">
-    <div class="card">Clientes sin respuesta</div>
-    <div class="card">Ventas perdidas</div>
-    <div class="card">Falta de tiempo</div>
-  </div>
+<h2>¿Qué problema resolvemos?</h2>
+
+<div class="grid">
+<div class="card">Clientes sin respuesta</div>
+<div class="card">Ventas perdidas</div>
+<div class="card">Falta de tiempo</div>
+</div>
 </section>
 
 <section>
-  <h2>¿Qué obtienes?</h2>
-  <div class="grid">
-    <div class="card">Automatización 24/7</div>
-    <div class="card">Más ventas</div>
-    <div class="card">Menos trabajo manual</div>
-  </div>
+<h2>¿Qué obtienes?</h2>
+
+<div class="grid">
+<div class="card">Automatización 24/7</div>
+<div class="card">Más ventas</div>
+<div class="card">Menos trabajo manual</div>
+</div>
 </section>
 
 <section class="cta">
-  <h2>Empieza hoy 🚀</h2>
-  <p>Te lo dejamos funcionando rápido</p>
-  <a href="https://wa.link/00056a" target="_blank" class="btn">
-    Empezar ahora
-  </a>
+<h2>Empieza hoy 🚀</h2>
+<p>Te lo dejamos funcionando rápido</p>
+
+<a href="https://wa.link/00056a" target="_blank" class="btn">
+Empezar ahora
+</a>
 </section>
 
 <section>
-  <h2>Síguenos</h2>
-  <div class="socials">
-    <a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://www.instagram.com/botifycr" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@botify.latam.cost" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
-  </div>
+<h2>Síguenos</h2>
+
+<div class="socials">
+<a href="https://www.facebook.com/share/1Hq3fFdEsy/?mibextid=wwXIfr" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.instagram.com/botifycr" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.tiktok.com/@botify.latam.cost" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+</div>
 </section>
 
 <a href="https://wa.link/00056a" target="_blank" class="whatsapp">
-  <i class="fab fa-whatsapp"></i> Escribinos
+<i class="fab fa-whatsapp"></i> Escribinos
 </a>
 
 </body>
