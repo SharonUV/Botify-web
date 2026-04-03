@@ -15,15 +15,28 @@ body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(180deg,#0F172A,#4F46E5);
 color:white;
+overflow-x:hidden;
 }
 
+/* LOGO */
 .logo{
 position:absolute;
-top:20px;
-left:40px;
+top:15px;
+left:25px;
+animation:fadeDown 1s ease;
 }
-.logo img{height:100px;}
 
+.logo img{
+height:160px;
+}
+
+@media (max-width:768px){
+.logo img{
+height:110px;
+}
+}
+
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -38,6 +51,7 @@ padding:100px 20px;
 font-size:55px;
 max-width:850px;
 line-height:1.1;
+animation:fadeUp 1s ease;
 }
 
 .hero p{
@@ -45,6 +59,7 @@ margin:20px 0;
 color:#CBD5F5;
 font-size:20px;
 max-width:600px;
+animation:fadeUp 1.3s ease;
 }
 
 .btn{
@@ -58,18 +73,32 @@ display:inline-block;
 margin-top:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 transition:0.3s;
+animation:fadeUp 1.6s ease;
 }
 
-.btn:hover{transform:translateY(-5px);}
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
 
 .hero img{
 width:220px;
 margin-top:40px;
+animation:float 3s ease-in-out infinite;
 }
 
+/* SECCIONES */
 section{
 padding:80px 20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
@@ -77,6 +106,7 @@ font-size:36px;
 margin-bottom:40px;
 }
 
+/* GRID */
 .grid{
 display:flex;
 flex-wrap:wrap;
@@ -84,6 +114,7 @@ justify-content:center;
 gap:25px;
 }
 
+/* CARDS */
 .card{
 background:rgba(255,255,255,0.08);
 border:1px solid rgba(255,255,255,0.15);
@@ -94,16 +125,42 @@ width:280px;
 transition:0.3s;
 }
 
-.card i{
-font-size:30px;
-margin-bottom:15px;
-color:#A78BFA;
-}
-
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px) scale(1.03);
 }
 
+/* BOTONES IMAGEN */
+.card-img{
+position:relative;
+width:300px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.card-img img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card-img:hover img{
+transform:scale(1.15);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+width:100%;
+padding:20px;
+color:white;
+}
+
+/* STEPS */
 .steps{
 display:flex;
 flex-wrap:wrap;
@@ -113,27 +170,35 @@ gap:30px;
 
 .step{
 max-width:250px;
+transition:0.3s;
 }
 
-.step i{
-font-size:35px;
-margin-bottom:15px;
-color:#60A5FA;
+.step:hover{
+transform:translateY(-10px);
 }
 
+/* CTA */
 .cta{
 background:linear-gradient(135deg,#6C2BD9,#2563EB);
 padding:80px 20px;
 border-radius:30px;
 margin:40px 20px;
+animation:fadeUp 1s ease;
 }
 
+/* REDES */
 .socials a{
 font-size:26px;
 margin:15px;
 color:white;
+transition:0.3s;
 }
 
+.socials a:hover{
+transform:scale(1.2);
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -148,6 +213,23 @@ display:flex;
 align-items:center;
 gap:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
+animation:fadeUp 2s ease;
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
 }
 </style>
 </head>
@@ -175,38 +257,36 @@ Solicitar demo
 </section>
 
 <section>
+<h2>Nuestras Soluciones</h2>
+
+<div class="grid">
+
+<a href="#" class="card-img">
+<img src="img/chatbot.jpg">
+<div class="overlay">
+<h3>Chatbots con IA</h3>
+<p>WhatsApp, Instagram, Facebook y Web</p>
+</div>
+</a>
+
+<a href="#" class="card-img">
+<img src="img/llamadas.jpg">
+<div class="overlay">
+<h3>Llamadas Automatizadas</h3>
+<p>Asistentes de voz que atienden clientes</p>
+</div>
+</a>
+
+</div>
+</section>
+
+<section>
 <h2>¿Qué problema resolvemos?</h2>
 
 <div class="grid">
 <div class="card"><i class="fas fa-comments"></i><p>Clientes sin respuesta</p></div>
 <div class="card"><i class="fas fa-chart-line"></i><p>Ventas perdidas</p></div>
 <div class="card"><i class="fas fa-clock"></i><p>Procesos manuales lentos</p></div>
-</div>
-</section>
-
-<section>
-<h2>Nuestras soluciones con IA</h2>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-robot"></i>
-<p><b>Chatbots Inteligentes</b><br>
-WhatsApp, Instagram, Facebook y Web automatizados</p>
-</div>
-
-<div class="card">
-<i class="fas fa-phone"></i>
-<p><b>Llamadas Automatizadas</b><br>
-Asistentes de voz con IA que atienden clientes</p>
-</div>
-
-<div class="card">
-<i class="fas fa-brain"></i>
-<p><b>Automatización de Procesos</b><br>
-Optimiza tareas y reduce trabajo manual</p>
-</div>
-
 </div>
 </section>
 
@@ -252,6 +332,20 @@ Hablar por WhatsApp
 <a href="https://wa.link/00056a" target="_blank" class="whatsapp">
 <i class="fab fa-whatsapp"></i> Escribinos
 </a>
+
+<script>
+// animación al hacer scroll
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
