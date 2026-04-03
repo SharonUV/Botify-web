@@ -23,16 +23,16 @@ overflow-x:hidden;
 position:absolute;
 top:15px;
 left:25px;
-animation:fadeDown 1s ease;
 }
 
 .logo img{
-height:160px;
+height:220px;
+filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
 }
 
 @media (max-width:768px){
 .logo img{
-height:110px;
+height:140px;
 }
 }
 
@@ -59,7 +59,7 @@ margin:20px 0;
 color:#CBD5F5;
 font-size:20px;
 max-width:600px;
-animation:fadeUp 1.3s ease;
+animation:fadeUp 1.2s ease;
 }
 
 .btn{
@@ -73,18 +73,18 @@ display:inline-block;
 margin-top:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 transition:0.3s;
-animation:fadeUp 1.6s ease;
+animation:fadeUp 1.4s ease;
 }
 
 .btn:hover{
 transform:translateY(-5px) scale(1.05);
-box-shadow:0 15px 30px rgba(0,0,0,0.4);
 }
 
-.hero img{
-width:220px;
+/* ROBOT */
+#robot{
+width:230px;
 margin-top:40px;
-animation:float 3s ease-in-out infinite;
+animation:float 4s ease-in-out infinite;
 }
 
 /* SECCIONES */
@@ -114,6 +114,37 @@ justify-content:center;
 gap:25px;
 }
 
+/* BOTONES CON IMAGEN */
+.card-img{
+position:relative;
+width:320px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.card-img img{
+width:100%;
+height:220px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card-img:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+background:linear-gradient(to top,rgba(0,0,0,0.85),transparent);
+width:100%;
+padding:20px;
+color:white;
+}
+
 /* CARDS */
 .card{
 background:rgba(255,255,255,0.08);
@@ -126,38 +157,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-12px) scale(1.03);
-}
-
-/* BOTONES IMAGEN */
-.card-img{
-position:relative;
-width:300px;
-border-radius:20px;
-overflow:hidden;
-cursor:pointer;
-text-decoration:none;
-transition:0.3s;
-}
-
-.card-img img{
-width:100%;
-height:200px;
-object-fit:cover;
-transition:0.4s;
-}
-
-.card-img:hover img{
-transform:scale(1.15);
-}
-
-.overlay{
-position:absolute;
-bottom:0;
-background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
-width:100%;
-padding:20px;
-color:white;
+transform:translateY(-10px);
 }
 
 /* STEPS */
@@ -170,11 +170,6 @@ gap:30px;
 
 .step{
 max-width:250px;
-transition:0.3s;
-}
-
-.step:hover{
-transform:translateY(-10px);
 }
 
 /* CTA */
@@ -183,7 +178,6 @@ background:linear-gradient(135deg,#6C2BD9,#2563EB);
 padding:80px 20px;
 border-radius:30px;
 margin:40px 20px;
-animation:fadeUp 1s ease;
 }
 
 /* REDES */
@@ -213,7 +207,6 @@ display:flex;
 align-items:center;
 gap:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
-animation:fadeUp 2s ease;
 }
 
 /* ANIMACIONES */
@@ -222,14 +215,9 @@ from{opacity:0; transform:translateY(40px);}
 to{opacity:1; transform:translateY(0);}
 }
 
-@keyframes fadeDown{
-from{opacity:0; transform:translateY(-40px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 @keyframes float{
 0%,100%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
+50%{transform:translateY(-12px);}
 }
 </style>
 </head>
@@ -252,7 +240,7 @@ Implementamos soluciones de IA que responden clientes, automatizan procesos y au
 Solicitar demo
 </a>
 
-<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+<img src="img/robot.png" id="robot">
 
 </section>
 
@@ -334,7 +322,6 @@ Hablar por WhatsApp
 </a>
 
 <script>
-// animación al hacer scroll
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
